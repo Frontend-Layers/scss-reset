@@ -1,0 +1,135 @@
+/**
+ * Typography
+ */
+
+
+/**
+ * Text Selection
+ */
+::-moz-selection {
+  color: $white;
+  background: $blue;
+  text-shadow: none;
+}
+
+::selection {
+  color: $white;
+  background: $blue;
+  text-shadow: none;
+}
+
+
+html,
+body {
+  font-family: $body-font;
+  font-weight: $body-font-weight;
+}
+
+html {
+  font-size: $basic-font-size;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $black;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  // line-height: 1;
+  // line-height: 1.15;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+  // text-rendering: optimizeSpeed;
+
+  text-size-adjust: 100%;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $header-font;
+}
+
+h1,
+h2 {
+  font-size: 4.8rem;
+  line-height: 7.2rem;
+  letter-spacing: 0.067rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: $text-color;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  border: none;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+// Disable text selection
+@mixin unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tablet {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
