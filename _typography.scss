@@ -27,13 +27,12 @@ body {
 
 html {
   font-size: $basic-font-size;
-  scroll-behavior: smooth;
 }
 
 body {
   color: $black;
   font-size: 1.6rem;
-  line-height: 2.4rem;
+  line-height: 2.4rem; // Golden ration for 16px font-size
   // line-height: 1;
   // line-height: 1.15;
 
@@ -65,7 +64,6 @@ h1,
 h2 {
   font-size: 4.8rem;
   line-height: 7.2rem;
-  letter-spacing: 0.067rem;
   font-weight: 700;
 }
 
@@ -95,10 +93,6 @@ a {
   }
 }
 
-button {
-  cursor: pointer;
-}
-
 input {
   &:focus {
     outline: none;
@@ -108,15 +102,6 @@ input {
 strong {
   font-weight: 700;
 }
-
-img {
-  border: none;
-}
-
-.text-right {
-  text-align: right;
-}
-
 
 // Disable text selection
 @mixin unselectable {

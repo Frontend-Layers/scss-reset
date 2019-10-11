@@ -190,8 +190,6 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   max-width: 100%;
 }
 
@@ -229,7 +227,6 @@ a:hover {
 /* Make images easier to work with */
 img {
   border: 0;
-
   max-width: 100%;
   display: block;
 }
