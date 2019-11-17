@@ -93,6 +93,10 @@ a {
   }
 }
 
+em {
+  font-style: italic;
+}
+
 input {
   &:focus {
     outline: none;
