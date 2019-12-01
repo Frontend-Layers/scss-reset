@@ -4,13 +4,10 @@
 
 
 /* Box sizing rules */
-* {
-
-  &:before,
-  &:after {
-    box-sizing: border-box;
-  }
+*, ::after, ::before {
+  box-sizing: border-box;
 }
+
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
