@@ -98,6 +98,8 @@ em {
 }
 
 input {
+  box-sizing: border-box;
+  
   &:focus {
     outline: none;
   }
