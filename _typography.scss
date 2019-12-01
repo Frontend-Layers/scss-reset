@@ -97,9 +97,7 @@ em {
   font-style: italic;
 }
 
-input {
-  box-sizing: border-box;
-  
+input {  
   &:focus {
     outline: none;
   }
