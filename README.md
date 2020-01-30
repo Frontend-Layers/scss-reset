@@ -6,4 +6,4 @@ SCSS reset compilation: modern reset + meyer's reset + normalizer
 - Reset only styles from https://necolas.github.io/normalize.css/
 - Typography defaults
 - Predefined variables
-- Optimization for REM 
+- Optimization for REM (int)
