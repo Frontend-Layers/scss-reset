@@ -90,6 +90,7 @@ a {
   &:hover {
     color: $text-color;
     text-decoration: underline;
+    outline: 0;
   }
 }
 
