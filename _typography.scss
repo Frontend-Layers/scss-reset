@@ -123,3 +123,6 @@ strong {
 .mobile {
   display: none;
 }
+
+[hidden] {display: none !important}
+[disabled] {pointer-events:none; opacity: 0.3}
