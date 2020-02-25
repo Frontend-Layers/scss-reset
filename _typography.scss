@@ -27,6 +27,10 @@ body {
 
 html {
   font-size: $basic-font-size;
+  
+  // Prevent responsive screen width overflow
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
