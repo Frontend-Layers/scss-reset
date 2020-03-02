@@ -31,6 +31,9 @@ html {
   // Prevent responsive screen width overflow
   width: 100%;
   overflow-x: hidden;
+  
+  // Smooth scroll
+  scroll-behavior: smooth;
 }
 
 body {
