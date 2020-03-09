@@ -7,3 +7,7 @@ SCSS reset compilation: modern reset + meyer's reset + normalizer
 - Typography defaults
 - Predefined variables
 - Optimization for REM (int)
+
+
+## Inspiration resources
+- https://hankchizljaw.com/wrote/a-modern-css-reset/
