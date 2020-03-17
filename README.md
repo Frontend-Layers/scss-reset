@@ -1,9 +1,6 @@
 # SCSS Reset
 
-SCSS reset compilation: modern reset + meyer's reset + normalizer + typography settings
-
-It's my personal alternative to all modern CSS resets integrated with SCSS without 
-for comfortable 'perfect pixel' work on new projects.
+Reset compilation = modern reset + meyer's reset + normalizer
 
 ## Features
 
