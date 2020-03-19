@@ -172,6 +172,11 @@ input[type=search] {
   box-sizing: content-box;
 }
 
+/* Hide default red border for required input fields */
+input:required {
+  box-shadow:none;
+}
+
 textarea {
   overflow: auto;
   vertical-align: top;
