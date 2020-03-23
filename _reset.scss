@@ -677,12 +677,42 @@ summary {
   display: list-item;
 }
 
-/* Misc
-   ========================================================================== */
+/*
+ * Misc
+ * ========================================================================== */
+
+/**
+ * Meter reset
+ */
+meter {
+  background: none;
+  -webkit-appearance: none;
+}
+
+::-moz-meter-bar {
+  -moz-appearance: none
+}
+
+:-moz-meter-optimum::-moz-meter-bar,
+:-moz-meter-sub-optimum::-moz-meter-bar,
+:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: none
+}
+
+
+meter::-webkit-meter-bar,
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value,
+meter::-webkit-meter-inner-element {
+  background: none;
+}
+
 
 /**
  * Add the correct display in IE 10+.
  */
+
 
 template {
   display: none;
