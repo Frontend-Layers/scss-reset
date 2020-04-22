@@ -16,8 +16,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
   },
-  "name": "ScssReset",
-  "version": "1.1.0",
+  "name": "scss-reset",
+  "version": "1.1.1",
   "description": "SCSS Reset",
   "main": "index.html",
   "repository": "https://github.com/andreymatin/scss-reset.git",
