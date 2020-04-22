@@ -7,8 +7,8 @@ Reset compilation = modern reset + meyer's reset + normalizer
 ## Features
 
 - Best practices from [modern-css-reset](https://github.com/hankchizljaw/modern-css-reset)
-- Modernized reset from [Meyer's CSS Rset](https://meyerweb.com/eric/tools/css/reset/)
-- Reset styles only from [normalize.css](https://necolas.github.io/normalize.css/)_
+- Modernized reset from [Meyer's CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
+- Reset styles only from [normalize.css](https://necolas.github.io/normalize.css/)
 - Typography normalization by SCSS variables
 - Optimization for BEM(int)
 - REM integration
