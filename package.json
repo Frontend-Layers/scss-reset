@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-bump": "^3.1.3",
+    "gulp-connect": "^5.7.0",
+    "gulp-file": "^0.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-open": "^3.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "name": "ScssReset",
+  "version": "1.1.0",
+  "description": "SCSS Reset",
+  "main": "index.html",
+  "repository": "https://github.com/andreymatin/scss-reset.git",
+  "author": "Andrey Matin",
+  "license": "MIT",
+  "browserslist": [
+    "> 1%"
+  ]
+}

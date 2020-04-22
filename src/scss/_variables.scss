@@ -18,9 +18,13 @@ $header-font: $font-family-title;
 $basic-font-size: 100%;
 $paragraph: 16px;
 
+// Golden ration for 16px font-size
+$line-height: 24px;
+
 // For REM / EM
 //$basic-font-size: 62.5%;
 //$paragraph: 1.6rem;
+//$line-height: 2.4rem;
 
 
 /*
