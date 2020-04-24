@@ -12,6 +12,7 @@ Reset compilation = modern reset + meyer's reset + normalizer
 - Typography normalization by SCSS variables
 - Optimization for BEM(int)
 - REM integration
+- Semantic Notes
 
 ## Installation
 
