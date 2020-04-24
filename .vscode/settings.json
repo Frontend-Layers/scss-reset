@@ -8,5 +8,6 @@
   ],
   "emmet.preferences": {
     "filter.commentAfter": "<!-- /[#ID][.CLASS] -->"
-  }
+  },
+  "liveServer.settings.port": 5501
 }

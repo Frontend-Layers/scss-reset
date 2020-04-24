@@ -30,6 +30,10 @@
   // Source Maps
   const sourcemaps = require('gulp-sourcemaps');
 
+  // Versions
+  const bump = require('gulp-bump');
+
+
   /**
    * Config
    */
@@ -97,6 +101,15 @@
     .pipe(connect.reload())
 
 
+  /**
+   * Patching
+   */
+  const bumper = () =>
+    src('./package.json')
+      .pipe(bump())
+      .pipe(dest('./'));
+
+
 
 
   /**
@@ -149,4 +162,9 @@
 
   // Development Tasks
   exports.default = parallel(series(styles, css, copyCSS), openServer, openBrowser, watcher);
+  exports.build = series(styles, css, copyCSS, bumper);
+
 })();
+
+
+

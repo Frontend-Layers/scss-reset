@@ -22,29 +22,24 @@ yarn add scss-reset;
 
 ```
 
-
 ## Usage
 
 Please add into top of the main.scss
 
-
 ```scss
-
-@import 'node_modules/scss-reset/src/scss/_variables.scss';
-@import 'node_modules/scss-reset/src/scss/_reset.scss';
-@import 'node_modules/scss-reset/src/scss/_typography.scss';
-
+@import '../node_modules/scss-reset/src/scss/_reset.scss';
 ```
 
-or if you copy it into your scss folder:
-
-```scss
-
-@import 'variables';
-@import 'reset';
-@import 'typography';
+_variables.scss and _typography.scss is optional.
+You can take it from
 
 ```
+'node_modules/scss-reset/src/scss/_variables.scss';
+'node_modules/scss-reset/src/scss/_typography.scss';
+```
+
+for additional modifications.
+
 
 ## Technical Files
 
