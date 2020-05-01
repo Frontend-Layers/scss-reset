@@ -2,29 +2,36 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Reset compilation = modern reset + meyer's reset + normalizer
+Reset compilation = modern reset + meyer's reset + normalizer.
+
+Best practices from the world's experience.
 
 ## Features
 
-- Best practices from [modern-css-reset](https://github.com/hankchizljaw/modern-css-reset)
-- Modernized reset from [Meyer's CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
-- Reset styles only from [normalize.css](https://necolas.github.io/normalize.css/)
+- Based on [Meyer's CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
+- Modernized [modern-css-reset](https://github.com/hankchizljaw/modern-css-reset)
+- Useful parts from [normalize.css](https://necolas.github.io/normalize.css/)
 - Typography normalization by SCSS variables
 - Optimization for BEM(int)
 - REM integration
 - Semantic Notes
+- Expandable by Accessability and Responsive mixin
 
 ## Installation
 
 
 ```
 yarn add scss-reset;
-
 ```
 
-## Usage
+or
 
-Please add into top of the main.scss
+```
+npm i scss-reset --save;
+```
+
+
+## Usage
 
 ```scss
 @import '../node_modules/scss-reset/src/scss/_reset.scss';
@@ -39,6 +46,79 @@ You can take it from
 ```
 
 for additional modifications.
+
+Or yo can download HTML bundle from git repo:
+
+[[normalize.css](https://github.com/andreymatin/html-initial-bundle)](https://github.com/andreymatin/html-initial-bundle)
+
+with other frontend toolkit.
+
+
+## Typography normalization
+
+- _variables.scss
+- _typography.scss
+
+### _variables.scss
+
+Predefined fonts and colors
+
+### _typography.scss
+
+Additional typographical reset
+
+## REM integration
+
+Please uncomment
+
+```scss
+$basic-font-size: 62.5%;
+$paragraph: 1.6rem;
+$line-height: 2.4rem;
+```
+at  <em>_variables.scss</em> and remove duplicates above.
+
+
+## Mixins
+
+- disableAnimation
+- acDisableAnimation
+- acModeBW
+- acModeContrast
+
+
+### disableAnimation
+
+Disable animation.
+
+```scss
+@include disableAnimation;
+```
+
+### acDisableAnimation
+
+Disable animation by Browser Configuration.
+
+```scss
+@include acDisableAnimation;
+```
+
+### acModeBW
+
+Grayscale Mode
+
+```scss
+@include acModeBW;
+```
+
+### acModeContrast
+
+Contrast Mode with Inverted colors
+
+```scss
+@include acModeContrast;
+```
+
 
 
 ## Technical Files

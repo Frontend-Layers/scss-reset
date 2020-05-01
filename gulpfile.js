@@ -53,7 +53,7 @@
     dest: {
       scss: './src/scss/',
       css: './src/css/',
-      cssDist: './dist/css/',
+      cssDist: './dist/',
       cssTest: './test/css/'
     },
   };

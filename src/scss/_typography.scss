@@ -10,11 +10,11 @@ body {
 
 html {
   font-size: $basic-font-size;
-  
+
   // Prevent responsive screen width overflow
   width: 100%;
   overflow-x: hidden;
-  
+
   // Smooth scroll
   scroll-behavior: smooth;
 }
@@ -68,15 +68,17 @@ a {
   }
 }
 
-i, em {
+i,
+em {
   font-style: italic;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 
-input {  
+input {
   &:focus {
     outline: none;
   }

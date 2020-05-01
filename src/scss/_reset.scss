@@ -1,9 +1,51 @@
 /**
+ * Reset Mixing
+ */
+
+// Disable Animation
+@mixin disableAnimation {
+  transform: none !important;
+
+  transition: none !important;
+  transition-property: none !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+
+  animation: none !important;
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  animation-iteration-count: 1 !important;
+
+  scroll-behavior: auto !important;
+}
+
+// Accessability. Disable animation for users with disabled animation by browser configuration
+@mixin acDisableAnimation {
+  @media (prefers-reduced-motion: reduce) {
+    @include disableAnimation;
+  }
+}
+
+// Accessability. Black and White Mode
+@mixin acModeBW {
+  filter: grayscale(100%);
+}
+
+// Accessability. Inverse Mode
+@mixin acModeContrast {
+  filter: invert(100%);
+  background-color: $white !important;
+}
+
+
+/**
  * Modern CSS Reset Tweaks
  */
 
 /* Box sizing rules */
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -156,6 +198,14 @@ table {
   border-spacing: 0;
 }
 
+/* Hide empty cell */
+td,
+th {
+  &:empty {
+    opacity: 0;
+  }
+}
+
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-results-button,
@@ -174,7 +224,7 @@ input[type=search] {
 
 /* Hide default red border for required input fields */
 input:required {
-  box-shadow:none;
+  box-shadow: none;
 }
 
 textarea {
@@ -219,14 +269,16 @@ a:hover {
   outline: none;
 }
 
-/**
- * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
- */
 
 /* Make images easier to work with */
 img {
   border: 0;
   max-width: 100%;
+  display: inline-block;
+}
+
+/* Make pictures easier to work with */
+picture {
   display: inline-block;
 }
 
@@ -271,13 +323,12 @@ select {
 
 button,
 html input[type="button"],
-/* 1 */
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
-  /* 2 */
   cursor: pointer;
-  /* 3 */
+  border: 0;
+  background: transparent;
 }
 
 /**
@@ -294,8 +345,6 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
   padding: 0;
 }
 
@@ -307,10 +356,8 @@ input[type="radio"] {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  /* 2 */
   box-sizing: content-box;
 }
 
@@ -418,21 +465,7 @@ a {
 
 abbr[title] {
   border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
-}
-
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
+  text-decoration: none;
 }
 
 /**
@@ -478,14 +511,6 @@ sup {
   top: -5px;
 }
 
-
-
-/**
- * 1. Correct font size not being inherited in all browsers.
- * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
- *    and Chrome.
- */
-
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -497,13 +522,10 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
+  line-height: 1;
   margin: 0;
-  /* 2 */
+  padding: 0;
 }
 
 /**
@@ -578,19 +600,11 @@ button:-moz-focusring,
 
 legend {
   border: 0;
-
-  box-sizing: border-box;
-  /* 1 */
   color: inherit;
-  /* 2 */
   display: table;
-  /* 1 */
   max-width: 100%;
-  /* 1 */
   padding: 0;
-  /* 3 */
   white-space: normal;
-  /* 1 */
 }
 
 /**
@@ -617,9 +631,11 @@ progress {
  * 2. Correct the outline style in Safari.
  */
 
- [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -636,17 +652,14 @@ progress {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
    ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
 
 /*
  * Add the correct display in all browsers.
