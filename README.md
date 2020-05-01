@@ -49,7 +49,7 @@ for additional modifications.
 
 Or yo can download HTML bundle from git repo:
 
-[[normalize.css](https://github.com/andreymatin/html-initial-bundle)](https://github.com/andreymatin/html-initial-bundle)
+[html-initial-bundle](https://github.com/andreymatin/html-initial-bundle)]
 
 with other frontend toolkit.
 
