@@ -21,13 +21,13 @@ Best practices from the world's experience.
 
 
 ```
-yarn add scss-reset;
+yarn add scss-reset
 ```
 
 or
 
 ```
-npm i scss-reset --save;
+npm i scss-reset --save
 ```
 
 
