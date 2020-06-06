@@ -61,6 +61,14 @@ a {
   color: $text-color;
   text-decoration: none;
 
+  &:visited {
+    color: $text-color;
+    text-decoration: none;
+    outline: 0;
+  }
+
+  &:focus,
+  &:active,
   &:hover {
     color: $text-color;
     text-decoration: underline;

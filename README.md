@@ -4,8 +4,6 @@
 
 Reset compilation = modern reset + meyer's reset + normalizer.
 
-Best practices from the world's experience.
-
 ## Features
 
 - Based on [Meyer's CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
@@ -21,13 +19,13 @@ Best practices from the world's experience.
 
 
 ```
-yarn add scss-reset
+yarn add scss-reset;
 ```
 
 or
 
 ```
-npm i scss-reset --save
+npm i scss-reset --save;
 ```
 
 
@@ -37,7 +35,7 @@ npm i scss-reset --save
 @import '../node_modules/scss-reset/src/scss/_reset.scss';
 ```
 
-_variables.scss and _typography.scss is optional.
+_variables.scss and _typography.scss are optional.
 You can take it from
 
 ```
@@ -49,7 +47,7 @@ for additional modifications.
 
 Or yo can download HTML bundle from git repo:
 
-[html-initial-bundle](https://github.com/andreymatin/html-initial-bundle)]
+[html-initial-bundle](https://github.com/andreymatin/html-initial-bundle)
 
 with other frontend toolkit.
 
@@ -76,7 +74,7 @@ $basic-font-size: 62.5%;
 $paragraph: 1.6rem;
 $line-height: 2.4rem;
 ```
-at  <em>_variables.scss</em> and remove duplicates above.
+at  _variables.scss and remove duplicates above.
 
 
 ## Mixins
@@ -129,6 +127,10 @@ Contrast Mode with Inverted colors
 ## GitHub
 
 - https://github.com/andreymatin/scss-reset
+
+## Contributing
+
+For issues, bugs or imporvements please open an [issue](https://github.com/andreymatin/scss-reset/issues/new)
 
 
 ## License
