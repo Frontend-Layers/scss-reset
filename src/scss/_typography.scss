@@ -10,13 +10,6 @@ body {
 
 html {
   font-size: $basic-font-size;
-
-  // Prevent responsive screen width overflow
-  width: 100%;
-  overflow-x: hidden;
-
-  // Smooth scroll
-  scroll-behavior: smooth;
 }
 
 body {
@@ -26,19 +19,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  text-rendering: optimizeLegibility;
-  // text-rendering: optimizeSpeed;
-
-  text-size-adjust: 100%;
-
-  position: relative;
-
-  width: 100%;
-  min-height: 100vh;
-
-  overflow-x: hidden;
-
-  scroll-behavior: smooth;
+  //text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
 }
 
 h1,
@@ -95,4 +77,16 @@ input {
 [disabled] {
   pointer-events: none;
   opacity: 0.5
+}
+
+.br {
+  display: block;
+}
+
+
+/**
+ * Disable horizontal scroll
+ */
+.overflow-x {
+  overflow-x: hidden;
 }

@@ -12,7 +12,6 @@ Reset compilation = modern reset + meyer's reset + normalizer.
 - Typography normalization by SCSS variables
 - Optimization for BEM(int)
 - REM integration
-- Semantic Notes
 - Expandable by Accessability and Responsive mixin
 
 ## Installation
@@ -36,7 +35,7 @@ npm i scss-reset --save;
 ```
 
 _variables.scss and _typography.scss are optional.
-You can take it from
+Better to copy it from
 
 ```
 'node_modules/scss-reset/src/scss/_variables.scss';
@@ -45,11 +44,10 @@ You can take it from
 
 for additional modifications.
 
-Or yo can download HTML bundle from git repo:
+
+Ready to use HTML template with all necessary frontend toolkit are there:
 
 [html-initial-bundle](https://github.com/andreymatin/html-initial-bundle)
-
-with other frontend toolkit.
 
 
 ## Typography normalization
@@ -63,7 +61,10 @@ Predefined fonts and colors
 
 ### _typography.scss
 
-Additional typographical reset
+Additional typographical reset and normalization classes
+
+- .overflow-x -- hide horizontal scroll for oversized blocks on mobile devices
+-
 
 ## REM integration
 
@@ -83,6 +84,7 @@ at  _variables.scss and remove duplicates above.
 - acDisableAnimation
 - acModeBW
 - acModeContrast
+- meterReset
 
 
 ### disableAnimation
@@ -117,6 +119,10 @@ Contrast Mode with Inverted colors
 @include acModeContrast;
 ```
 
+### meterReset
+
+reset styles for meter
+
 
 
 ## Technical Files
@@ -136,9 +142,3 @@ For issues, bugs or imporvements please open an [issue](https://github.com/andre
 ## License
 
 MIT
-
-
-## Inspiration
-
-- https://hankchizljaw.com/wrote/a-modern-css-reset/
-

@@ -15,18 +15,38 @@
  * ========================================================================== */
 /**
  * Reset Mixing
+ * ================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-size-adjust: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/**
+ * Disable Animation
+ */
+/**
+ * Disable animation depends on Browser or Operation System configuration
+ */
+/**
+ * Accessability. Black and White Mode
  */
 /**
  * Modern CSS Reset Tweaks
- */
-/* Box sizing rules */
+ * ================================================== */
+/* Box sizing normalization */
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 
-/* A elements that don't have a class get default styles */
+/* Elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -158,8 +178,7 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
+blockquote:before, blockquote:after,
 q:before,
 q:after {
   content: '';
@@ -612,34 +631,16 @@ summary {
 /**
  * Meter reset
  */
-meter {
-  background: none;
-  -webkit-appearance: none;
-}
-
-::-moz-meter-bar {
-  -moz-appearance: none;
-}
-
-:-moz-meter-optimum::-moz-meter-bar,
-:-moz-meter-sub-optimum::-moz-meter-bar,
-:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-  background: none;
-}
-
-meter::-webkit-meter-bar,
-meter::-webkit-meter-optimum-value,
-meter::-webkit-meter-suboptimum-value,
-meter::-webkit-meter-even-less-good-value,
-meter::-webkit-meter-inner-element {
-  background: none;
-}
-
 /**
  * Add the correct display in IE 10+.
  */
 template {
   display: none;
+}
+
+.overflow-x-hidden {
+  /*   overflow-x: hidden; */
+  border: 1px solid blue;
 }
 
 /**
@@ -653,9 +654,6 @@ body {
 
 html {
   font-size: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -664,13 +662,7 @@ body {
   line-height: 24px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
 }
 
 h1,
@@ -722,6 +714,17 @@ input:focus {
 [disabled] {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.br {
+  display: block;
+}
+
+/**
+ * Disable horizontal scroll
+ */
+.overflow-x {
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

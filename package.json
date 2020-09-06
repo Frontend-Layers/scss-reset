@@ -17,7 +17,7 @@
     "gulp-sourcemaps": "^2.6.5"
   },
   "name": "scss-reset",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "SCSS Reset",
   "main": "index.html",
   "repository": "https://github.com/andreymatin/scss-reset.git",
@@ -33,5 +33,5 @@
   ],
   "bugs": {
     "url": "https://github.com/andreymatin/scss-reset/issues"
-  }  
+  }
 }

@@ -1,8 +1,24 @@
 /**
  * Reset Mixing
- */
+ * ================================================== */
 
-// Disable Animation
+
+html {
+  // Smooth scroll
+  scroll-behavior: smooth;
+}
+
+body {
+  text-size-adjust: 100%;
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+/**
+ * Disable Animation
+ */
 @mixin disableAnimation {
   transform: none !important;
 
@@ -19,14 +35,18 @@
   scroll-behavior: auto !important;
 }
 
-// Accessability. Disable animation for users with disabled animation by browser configuration
+/**
+ * Disable animation depends on Browser or Operation System configuration
+ */
 @mixin acDisableAnimation {
   @media (prefers-reduced-motion: reduce) {
     @include disableAnimation;
   }
 }
 
-// Accessability. Black and White Mode
+/**
+ * Accessability. Black and White Mode
+ */
 @mixin acModeBW {
   filter: grayscale(100%);
 }
@@ -40,9 +60,9 @@
 
 /**
  * Modern CSS Reset Tweaks
- */
+ * ================================================== */
 
-/* Box sizing rules */
+/* Box sizing normalization */
 *,
 ::after,
 ::before {
@@ -50,7 +70,7 @@
 }
 
 
-/* A elements that don't have a class get default styles */
+/* Elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -183,14 +203,12 @@ ul {
 blockquote,
 q {
   quotes: none;
-}
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+  &:before,
+  &:after {
+    content: '';
+    content: none;
+  }
 }
 
 table {
@@ -218,8 +236,8 @@ input {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px white inset;
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
 input[type=search]::-webkit-search-cancel-button,
@@ -685,28 +703,30 @@ summary {
 /**
  * Meter reset
  */
-meter {
-  background: none;
-  -webkit-appearance: none;
-}
+@mixin meterReset {
+  meter {
+    background: none;
+    -webkit-appearance: none;
+  }
 
-::-moz-meter-bar {
-  -moz-appearance: none
-}
+  ::-moz-meter-bar {
+    -moz-appearance: none
+  }
 
-:-moz-meter-optimum::-moz-meter-bar,
-:-moz-meter-sub-optimum::-moz-meter-bar,
-:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-  background: none
-}
+  :-moz-meter-optimum::-moz-meter-bar,
+  :-moz-meter-sub-optimum::-moz-meter-bar,
+  :-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: none
+  }
 
 
-meter::-webkit-meter-bar,
-meter::-webkit-meter-optimum-value,
-meter::-webkit-meter-suboptimum-value,
-meter::-webkit-meter-even-less-good-value,
-meter::-webkit-meter-inner-element {
-  background: none;
+  meter::-webkit-meter-bar,
+  meter::-webkit-meter-optimum-value,
+  meter::-webkit-meter-suboptimum-value,
+  meter::-webkit-meter-even-less-good-value,
+  meter::-webkit-meter-inner-element {
+    background: none;
+  }
 }
 
 
@@ -716,4 +736,10 @@ meter::-webkit-meter-inner-element {
 
 template {
   display: none;
+}
+
+
+.overflow-x-hidden {
+  /*   overflow-x: hidden; */
+  border: 1px solid blue;
 }
