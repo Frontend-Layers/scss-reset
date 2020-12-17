@@ -13,9 +13,16 @@ Reset compilation = modern reset + meyer's reset + normalizer.
 - Optimization for BEM(int)
 - REM integration
 - Expandable by Accessability and Responsive mixin
+- Mobile friendly optimization
+
+## Why
+
+For instantly fix some persistent issues from normalize.css and add missing parts from popular CSS resets.
+It also compatible with other HTML/CSS frameworks like Twitter Bootstrap, Tailwimd CSS, etc.
+You can also extend styles reset by mixin collection. I also recommend to use copy of _typography.scss
+and _variables.scss for design systems and themes extending.
 
 ## Installation
-
 
 ```
 yarn add scss-reset;
@@ -34,7 +41,14 @@ npm i scss-reset --save;
 @import '../node_modules/scss-reset/src/scss/_reset.scss';
 ```
 
+or shorter:
+
+```scss
+@import '../node_modules/scss-reset/_reset.scss';
+```
+
 _variables.scss and _typography.scss are optional.
+
 Better to copy it from
 
 ```
@@ -45,7 +59,7 @@ Better to copy it from
 for additional modifications.
 
 
-Ready to use HTML template with all necessary frontend toolkit are there:
+Ready to use HTML template with all necessary frontend toolkit is there:
 
 [html-initial-bundle](https://github.com/andreymatin/html-initial-bundle)
 
@@ -85,6 +99,7 @@ at  _variables.scss and remove duplicates above.
 - acModeBW
 - acModeContrast
 - meterReset
+- progressReset
 
 
 ### disableAnimation
@@ -123,6 +138,17 @@ Contrast Mode with Inverted colors
 
 reset styles for meter
 
+```scss
+@include meterReset;
+```
+
+### progressReset
+
+reset styles for progress
+
+```scss
+@include progressReset;
+```
 
 
 ## Technical Files
