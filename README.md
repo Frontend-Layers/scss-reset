@@ -1,28 +1,34 @@
 # SCSS Reset
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![npm](https://img.shields.io/npm/v/scss-reset?color=%23cb0000)
+![npm](https://img.shields.io/npm/dw/scss-reset)
 
 Reset compilation = modern reset + meyer's reset + normalizer.
+
+Demo: https://andreymatin.github.io/scss-reset/test/index.html
 
 ## Features
 
 - Based on [Meyer's CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 - Modernized [modern-css-reset](https://github.com/hankchizljaw/modern-css-reset)
 - Useful parts from [normalize.css](https://necolas.github.io/normalize.css/)
-- Typography normalization by SCSS variables
-- Optimization for BEM(int)
-- REM integration
-- Expandable by Accessability and Responsive mixin
+- Typography normalization by SCSS variables (REM, BEM(int))
+- Expandable by Accessability and Responsive mixins
 - Mobile friendly optimization
 
 ## Why
 
-For instantly fix some persistent issues from normalize.css and add missing parts from popular CSS resets.
-It also compatible with other HTML/CSS frameworks like Twitter Bootstrap, Tailwimd CSS, etc.
-You can also extend styles reset by mixin collection. I also recommend to use copy of _typography.scss
-and _variables.scss for design systems and themes extending.
+For instantly fix some persistent CSS issues and add missing parts for popular CSS resets.
+It is also compatible with other HTML/CSS frameworks like Twitter Bootstrap, Tailwind CSS, etc.
+You can extend styles reset by mixin collection. 
 
-## Installation
+I recommend to use copies of _typography.scss and _variables.scss for design systems and themes extending.
+
+## Install
+
+[![NPM](https://nodei.co/npm/scss-reset.png?compact=true)](https://nodei.co/npm/scss-reset/)
+
 
 ```
 yarn add scss-reset;
@@ -37,19 +43,30 @@ npm i scss-reset --save;
 
 ## Usage
 
+Please include into top of the main.scss:
+
+
 ```scss
 @import '../node_modules/scss-reset/src/scss/_reset.scss';
 ```
 
-or shorter:
+or:
 
 ```scss
 @import '../node_modules/scss-reset/_reset.scss';
 ```
 
+or shorter:
+
+```scss
+@import 'scss-reset/_reset.scss';
+```
+
+## Typography Usage
+
 _variables.scss and _typography.scss are optional.
 
-Better to copy it from
+Please copy them from
 
 ```
 'node_modules/scss-reset/src/scss/_variables.scss';
@@ -58,8 +75,7 @@ Better to copy it from
 
 for additional modifications.
 
-
-Ready to use HTML template with all necessary frontend toolkit is there:
+Ready to use HTML template with all necessary includes is there:
 
 [html-initial-bundle](https://github.com/andreymatin/html-initial-bundle)
 
@@ -68,29 +84,6 @@ Ready to use HTML template with all necessary frontend toolkit is there:
 
 - _variables.scss
 - _typography.scss
-
-### _variables.scss
-
-Predefined fonts and colors
-
-### _typography.scss
-
-Additional typographical reset and normalization classes
-
-- .overflow-x -- hide horizontal scroll for oversized blocks on mobile devices
--
-
-## REM integration
-
-Please uncomment
-
-```scss
-$basic-font-size: 62.5%;
-$paragraph: 1.6rem;
-$line-height: 2.4rem;
-```
-at  _variables.scss and remove duplicates above.
-
 
 ## Mixins
 
@@ -104,7 +97,7 @@ at  _variables.scss and remove duplicates above.
 
 ### disableAnimation
 
-Disable animation.
+Disable animation
 
 ```scss
 @include disableAnimation;
@@ -112,7 +105,7 @@ Disable animation.
 
 ### acDisableAnimation
 
-Disable animation by Browser Configuration.
+Disable animation by Browser Configuration
 
 ```scss
 @include acDisableAnimation;
@@ -136,7 +129,7 @@ Contrast Mode with Inverted colors
 
 ### meterReset
 
-reset styles for meter
+Styles reset for ```<meter>```
 
 ```scss
 @include meterReset;
@@ -144,7 +137,7 @@ reset styles for meter
 
 ### progressReset
 
-reset styles for progress
+Styles reset for ```<progress>```
 
 ```scss
 @include progressReset;
