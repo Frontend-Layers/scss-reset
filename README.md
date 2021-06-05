@@ -6,7 +6,7 @@
 
 Reset compilation = modern reset + meyer's reset + normalizer.
 
-Demo: https://andreymatin.github.io/scss-reset/test/index.html
+Demo: https://andreymatin.github.io/scss-reset-staging/test/index.html
 
 ## Features
 
@@ -21,7 +21,7 @@ Demo: https://andreymatin.github.io/scss-reset/test/index.html
 
 For instantly fix some persistent CSS issues and add missing parts for popular CSS resets.
 It is also compatible with other HTML/CSS frameworks like Twitter Bootstrap, Tailwind CSS, etc.
-You can extend styles reset by mixin collection. 
+You can extend styles reset by mixin collection.
 
 I recommend to use copies of _typography.scss and _variables.scss for design systems and themes extending.
 
