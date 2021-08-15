@@ -6,7 +6,7 @@
 
 Reset compilation = modern reset + meyer's reset + normalizer.
 
-Demo: https://andreymatin.github.io/scss-reset-staging/test/index.html
+Demo: https://andreymatin.github.io/scss-reset/test/index.html
 
 ## Features
 
