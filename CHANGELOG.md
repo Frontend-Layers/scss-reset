@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.1] - 2021-06-05
+
+- Added Shopify Dawn Reset CSS
+- Updated test pages
+
 ## [1.2.0] - 2021-06-05
 
 - Relocated test and development files into staging repository to avoid npm package versions collision (#11)

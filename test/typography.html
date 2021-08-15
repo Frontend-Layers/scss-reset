@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reset Styles Test page</title>
+  <link rel="stylesheet" href="./css/main.css">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+
+  <div style="position: -webkit-sticky; position: sticky; top: 0;">
+    Sticky Test
+  </div>
+
+  <!-- Header Test-->
+  <div style="padding: 50px 0;">
+    <h3 style="font-size: 24px; padding: 20px 0;">Headers Test</h3>
+
+    <h1>H1 Title</h1>
+    <h2>H2 Title</h2>
+    <h3>H3 Title</h3>
+    <h4>H4 Title</h4>
+    <h5>H5 Title</h5>
+  </div>
+
+
+  <!-- Paragraph Test-->
+  <div style="padding: 50px 0;">
+    <h3 style="font-size: 24px; padding: 20px 0;">Paragraph Test</h3>
+
+    <p>Lorem ipsum dolor sit <a href="#">amet</a> consectetur adipisicing elit. Pariatur alias et necessitatibus amet, ut consequatur, minus dolorem ab inventore, soluta facilis nisi consequuntur velit similique quis nihil adipisci. Modi, odio.</p>
+    <p>Lorem <strong>ipsum</strong> dolor <b>sit</b> amet <em>consectetur</em> adipisicing <i>elit</i>. Pariatur alias et necessitatibus amet, ut consequatur, minus dolorem ab inventore, soluta facilis nisi consequuntur velit similique quis nihil adipisci. Modi, odio.</p>
+  </div>
+
+
+  <!-- List Test-->
+  <div style="padding: 50px 0;">
+    <h3 style="font-size: 24px; padding: 20px 0;">Lists</h3>
+
+    <ol>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+    </ol>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+    </ul>
+  </div>
+
+
+  <!-- Table Test-->
+  <div style="padding: 50px 0;">
+    <h3 style="font-size: 24px; padding: 20px 0;">Table Test</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>header</th>
+          <th>header</th>
+          <th>header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-size: 24px; padding: 20px 0;">Table Test II</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>header</th>
+          <th>header</th>
+          <th style="background: red;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2" style="background: paleturquoise;">cell</td>
+          <td style="background: red;"></td>
+          <td>cell</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="background: thistle;">cell</td>
+        </tr>
+        <tr>
+          <td>cell</td>
+          <td>cell</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>cell</td>
+          <td>cell</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+  </div>
+
+
+
+
+  <!-- Form Test-->
+  <div style="padding: 50px 0;">
+    <h3 style="font-size: 24px; padding: 20px 0;">Form Elements</h3>
+
+    <form action="/" method="POST">
+      <fieldset>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Name">
+      </fieldset>
+      <fieldset>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Email">
+      </fieldset>
+
+      <fieldset>
+        <ul>
+          <li>
+            <input type="radio" id="water" name="element" value="water">
+            <label for="water">Water</label>
+          </li>
+          <li>
+            <input type="radio" id="air" name="element" value="air">
+            <label for="air">Air</label>
+          </li>
+          <li>
+            <input type="radio" id="fire" name="element" value="fire">
+            <label for="fire">Fire</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <textarea placeholder="textarea"></textarea>
+      </fieldset>
+      <fieldset>
+        <button type="submit">Submit Button</button>
+      </fieldset>
+
+    </form>
+
+    <h3 style="font-size: 24px; padding: 20px 0;">Form Elements II</h3>
+
+    <form action="" class="form-showcase">
+
+      <fieldset>
+        <legend>Personal</legend>
+        <label for="username">Username:</label>
+        <input id="username" type="text">
+        <label for="name">Full Name:</label>
+        <input id="name" type="text">
+        <label for="email">Email Address:</label>
+        <input id="email" type="email">
+        <label for="date">Date of Birth:</label>
+        <input id="date" type="date">
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact</legend>
+        <label for="address">Address:</label>
+        <input id="address" type="text">
+        <label for="zip">Zip:</label>
+        <input id="zip" type="text">
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel">
+      </fieldset>
+
+      <button>Button Outline Focus Test</button>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+
+  </div>
+
+
+
+  <!-- Images Test-->
+  <div style="padding: 50px 0;">
+    <h3 style="font-size: 24px; padding: 20px 0;">Images. Test 1</h3>
+
+    <img src="https://picsum.photos/536/354" alt=""><img src="https://picsum.photos/536/354" alt="">
+
+    <h3 style="font-size: 24px; padding: 20px 0;">Images. Test 2. Centering</h3>
+
+    <div style="text-align: center;">
+      <img src="https://picsum.photos/536/354" alt="">
+    </div>
+
+    <h3 style="font-size: 24px; padding: 20px 0;">Picture. Test 1</h3>
+
+    <picture>
+      <source srcset="./images/146-536x354.webp">
+      <img src="./images/146-536x354.jpg" alt="">
+    </picture>
+
+    <h3 style="font-size: 24px; padding: 20px 0;">Picture. Test 2. Centering</h3>
+
+    <div style="display: flex; justify-content: center;">
+      <div>
+        <picture>
+          <source srcset="./images/146-536x354.webp">
+          <img src="./images/146-536x354.jpg" alt="">
+        </picture>
+      </div>
+      <div>
+        <picture>
+          <source srcset="./images/146-536x354.webp">
+          <img src="./images/146-536x354.jpg" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Responsive Test-->
+  <div style="padding: 50px 0;">
+    <h3 style="font-size: 24px; padding: 20px 0;">Mobile Oversized Div Test</h3>
+
+    <div class="overflow-x">
+      <div style="width: 110%; border: 1px solid blue;">
+        Div
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
