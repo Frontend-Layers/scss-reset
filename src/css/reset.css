@@ -20,6 +20,10 @@
  * Modern CSS Reset Tweaks
  * ================================================== */
 html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html:focus-within {
   scroll-behavior: smooth;
 }
 
@@ -28,6 +32,9 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
 }
 
 /* Box sizing normalization */
@@ -176,17 +183,6 @@ q:after {
   content: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Hide empty cell */
-td:empty,
-th:empty {
-  opacity: 0;
-}
-
 /**
  * Input Reset
  */
@@ -222,6 +218,10 @@ textarea {
   overflow: auto;
   vertical-align: top;
   resize: vertical;
+}
+
+input:focus {
+  outline: none;
 }
 
 /**
@@ -260,7 +260,6 @@ a:hover {
 
 /* Make images easier to work with */
 img {
-  border: 0;
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
@@ -270,13 +269,6 @@ img {
 /* Make pictures easier to work with */
 picture {
   display: inline-block;
-}
-
-/**
- * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
- */
-figure {
-  margin: 0;
 }
 
 /**
@@ -309,16 +301,16 @@ input[type="submit"] {
   background: transparent;
 }
 
-button::-moz-focus-inner {
-  border: 0;
-}
-
 /**
  * Re-set default cursor for disabled elements.
  */
 button[disabled],
 html input[disabled] {
   cursor: default;
+}
+
+[disabled] {
+  pointer-events: none;
 }
 
 /**
@@ -364,15 +356,9 @@ button {
   background: transparent;
 }
 
-/**
- * 1. Remove default vertical scrollbar in IE 6/7/8/9.
- * 2. Improve readability and alignment in all browsers.
- */
 textarea {
   overflow: auto;
-  /* 1 */
   vertical-align: top;
-  /* 2 */
   resize: vertical;
 }
 
@@ -382,6 +368,7 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  text-indent: 0;
 }
 
 /**
@@ -425,17 +412,11 @@ abbr[title] {
   text-decoration: none;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 code,
 kbd,
+pre,
 samp {
   font-family: monospace, monospace;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
 }
 
 /**

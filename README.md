@@ -88,6 +88,13 @@ for additional modifications.
 {{ 'reset-shopify-down.css' | asset_url | stylesheet_tag }}
 ```
 
+## CDN
+
+```
+https://cdn.jsdelivr.net/gh/andreymatin/scss-reset/build/reset.css
+```
+
+
 ## Mixins
 
 | Mixins             | Include                      | Description                                       |

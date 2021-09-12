@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.2] - 2021-09-12
+
+- css reset: Removed css duplicates
+- css reset: Minor fixes
+- sys: Removed yarn.lock
+- sys: Compressed CSS
+- doc: added CDN link
+
 ## [1.2.1] - 2021-06-05
 
 - Added Shopify Dawn Reset CSS

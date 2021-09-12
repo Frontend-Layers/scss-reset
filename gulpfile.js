@@ -12,6 +12,7 @@
   const postcss = require("gulp-postcss");
   const autoprefixer = require("autoprefixer");
   const cssnano = require("cssnano");
+  const cleanCSS = require('gulp-clean-css');
 
   // Server
   const connect = require("gulp-connect");
@@ -144,13 +145,22 @@
 
   const copyResetCSS = () => src("./src/scss/_reset.scss").pipe(dest("./"));
 
+
+  const minifyResetCSS = () => src('./build/reset.css')
+      .pipe(cleanCSS({debug: true}, (details) => {
+        console.log(`${details.name}: ${details.stats.originalSize}`);
+        console.log(`${details.name}: ${details.stats.minifiedSize}`);
+      }))
+    .pipe(dest('build'));
+
+
   /**
    * Tasks
    */
 
   // Development Tasks
   exports.default = parallel(
-    series(stylesRenameReset, styles, css, copyCSS, copyResetCSS),
+    series(stylesRenameReset, styles, css, copyCSS, copyResetCSS, minifyResetCSS),
     openServer,
     openBrowser,
     watcher
@@ -162,6 +172,7 @@
     css,
     copyCSS,
     copyResetCSS,
+    minifyResetCSS,
     bumper
   );
 })();
