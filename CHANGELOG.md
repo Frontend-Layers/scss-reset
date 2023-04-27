@@ -1,5 +1,15 @@
 # Changelog
 
+# [1.3.0]
+
+- added "total" reset total-reset.scss
+- freshed up dev infrastructure
+
+# [1.2.3]
+
+- scss: added min-height: -webkit-fill-available (https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/)
+
+
 ## [1.2.2] - 2021-09-12
 
 - css reset: Removed css duplicates

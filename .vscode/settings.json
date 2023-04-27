@@ -1,0 +1,44 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      //"format": "compressed",
+      "extensionName": ".css",
+      "savePath": "/styles/"
+    }
+  ],
+  "emmet.preferences": {
+    "filter.commentAfter": "<!-- /[#ID][.CLASS] -->"
+  },
+  "workbench.panel.defaultLocation": "right",
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/tmp": true,
+    "**/styles": true,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true   
+  },
+  "html.format.indentInnerHtml": false,
+  "html.format.wrapAttributes": "preserve",
+  "php.suggest.basic": false,
+  "editor.quickSuggestions": {
+    "comments": true
+  },
+  "editor.fontLigatures": "'ss01'",
+  "javascript.format": {
+    "semicolons": "insert",
+    "insertSpaceBeforeFunctionParenthesis": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "html.format.extraLiners": "",
+  "files.eol": "\n"
+}

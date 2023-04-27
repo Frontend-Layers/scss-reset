@@ -114,7 +114,6 @@
 /**
  * Modern CSS Reset Tweaks
  * ================================================== */
-
 html {
   -webkit-text-size-adjust: 100%;
 
@@ -341,7 +340,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -350,7 +348,6 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  */
-
 [hidden] {
   display: none;
 }
@@ -380,7 +377,6 @@ picture {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-
 button,
 input {
   line-height: normal;
@@ -411,7 +407,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -434,7 +429,6 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -446,7 +440,6 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -455,7 +448,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -532,8 +524,8 @@ samp {
 }
 
 /**
-  * Add the correct font size in all browsers.
-  */
+ * Add the correct font size in all browsers.
+ */
 small {
   font-size: 75%;
 }
@@ -588,7 +580,6 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-
 button,
 select {
   /* 1 */
@@ -598,7 +589,6 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-
 button,
 [type="button"],
 [type="reset"],
@@ -699,9 +689,6 @@ summary {
  * Misc
  * ========================================================================== */
 
-/**
- * Add the correct display in IE 10+.
- */
 template {
   display: none;
 }
