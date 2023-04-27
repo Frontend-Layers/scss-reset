@@ -4,6 +4,7 @@
 
 - added "total" reset total-reset.scss
 - freshed up dev infrastructure
+- added Data URI snippets
 
 # [1.2.3]
 
