@@ -1,4 +1,4 @@
-* {
+*:where(:not(table, thead, tbody, tr, th, td)) {
   all: unset;
   box-sizing: border-box;
 
@@ -86,8 +86,34 @@ time,
 mark,
 audio,
 video,
-main {
+main,
+button {
   font-size: 100%;
+}
+
+div,
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+form,
+header,
+hgroup,
+menu,
+nav,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre {
   display: block;
 }
 
@@ -99,8 +125,18 @@ picture,
 svg {
   display: inline-block;
   max-width: 100%;
+  vertical-align: middle;
 }
 
 [hidden] {
   display: none;
+}
+
+template,
+style {
+  display: none;
+}
+
+a[href], label[for], select, button {
+  cursor: pointer;
 }

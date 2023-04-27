@@ -1,8 +1,16 @@
 # Changelog
 
+# [1.3.2]
+
+- _total-reset.scss updates for table and block elements
+
+# [1.3.1]
+
+- readme updates
+
 # [1.3.0]
 
-- added "total" reset total-reset.scss
+- added "total" reset _total-reset.scss
 - freshed up dev infrastructure
 - added Data URI snippets
 
