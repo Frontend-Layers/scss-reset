@@ -1,5 +1,9 @@
 # Changelog
 
+# [1.3.4]
+
+- _total-reset.scss updates for svg. Added @namespace
+
 # [1.3.3]
 
 - _total-reset.scss updates for svg and table
