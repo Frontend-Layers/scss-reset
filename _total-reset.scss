@@ -1,4 +1,4 @@
-*:where(:not(table, thead, tbody, tr, th, td)) {
+*:where(:not(table, thead, tbody, tr, th, td, svg)) {
   all: unset;
   box-sizing: border-box;
 
@@ -139,4 +139,22 @@ style {
 
 a[href], label[for], select, button {
   cursor: pointer;
+}
+
+/**
+ * Table
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-indent: 0;
+}
+
+table, thead, tbody, tr, th, td {
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }

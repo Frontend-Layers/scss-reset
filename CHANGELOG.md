@@ -1,5 +1,9 @@
 # Changelog
 
+# [1.3.3]
+
+- _total-reset.scss updates for svg and table
+
 # [1.3.2]
 
 - _total-reset.scss updates for table and block elements
