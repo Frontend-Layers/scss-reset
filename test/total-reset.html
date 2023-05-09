@@ -3,7 +3,8 @@
 
 <head>
   <title>Reset Styles Test page</title>
-  <style>@import url("data:text/css;base64,OndoZXJlKDpub3QodGFibGUsdGhlYWQsdGJvZHksdHIsdGgsdGQpKXthbGw6dW5zZXQ7Ym94LXNpemluZzpib3JkZXItYm94fTp3aGVyZSg6bm90KHRhYmxlLHRoZWFkLHRib2R5LHRyLHRoLHRkKSk6YWZ0ZXIsOndoZXJlKDpub3QodGFibGUsdGhlYWQsdGJvZHksdHIsdGgsdGQpKTpiZWZvcmV7YWxsOnVuc2V0O2JveC1zaXppbmc6Ym9yZGVyLWJveH1hLGFiYnIsYWNyb255bSxhZGRyZXNzLGFydGljbGUsYXNpZGUsYXVkaW8sYixiaWcsYmxvY2txdW90ZSxidXR0b24sY2FudmFzLGNhcHRpb24sY2VudGVyLGNpdGUsY29kZSxkZCxkZWwsZGV0YWlscyxkZm4sZGl2LGRsLGR0LGVtLGVtYmVkLGZpZWxkc2V0LGZpZ2NhcHRpb24sZmlndXJlLGZvb3Rlcixmb3JtLGgxLGgyLGgzLGg0LGg1LGg2LGhlYWRlcixoZ3JvdXAsaSxpZnJhbWUsaW1nLGlucyxrYmQsbGFiZWwsbGVnZW5kLGxpLG1haW4sbWFyayxtZW51LG5hdixvbCxvdXRwdXQscCxwcmUscSxydWJ5LHMsc2FtcCxzZWN0aW9uLHNtYWxsLHNwYW4sc3RyaWtlLHN0cm9uZyxzdWIsc3VtbWFyeSxzdXAsdGFibGUsdGJvZHksdGQsdGZvb3QsdGgsdGhlYWQsdGltZSx0cix0dCx1LHVsLHZhcix2aWRlb3tmb250LXNpemU6MTAwJX1hcnRpY2xlLGFzaWRlLGJsb2NrcXVvdGUsZGV0YWlscyxkaXYsZmlnY2FwdGlvbixmaWd1cmUsZm9vdGVyLGZvcm0saDEsaDIsaDMsaDQsaDUsaDYsaGVhZGVyLGhncm91cCxtYWluLG1lbnUsbmF2LHAscHJlLHNlY3Rpb257ZGlzcGxheTpibG9ja31hdWRpbyxjYW52YXMsaW1nLHBpY3R1cmUsc3ZnLHZpZGVve2Rpc3BsYXk6aW5saW5lLWJsb2NrO21heC13aWR0aDoxMDAlO3ZlcnRpY2FsLWFsaWduOm1pZGRsZX1baGlkZGVuXSxzdHlsZSx0ZW1wbGF0ZXtkaXNwbGF5Om5vbmV9YVtocmVmXSxidXR0b24sbGFiZWxbZm9yXSxzZWxlY3R7Y3Vyc29yOnBvaW50ZXJ9");</style>
+  <link rel="stylesheet" href="./css/total-reset.css">
+
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
@@ -128,20 +129,24 @@
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" placeholder="Email">
       </fieldset>
+      <fieldset>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Password">
+      </fieldset>
 
       <fieldset>
         <ul>
           <li>
             <input type="radio" id="water" name="element" value="water">
-            <label for="water">Water</label>
+            <label for="water">Radio: Water</label>
           </li>
           <li>
             <input type="radio" id="air" name="element" value="air">
-            <label for="air">Air</label>
+            <label for="air">Radio: Air</label>
           </li>
           <li>
             <input type="radio" id="fire" name="element" value="fire">
-            <label for="fire">Fire</label>
+            <label for="fire">Radio: Fire</label>
           </li>
         </ul>
       </fieldset>
@@ -149,6 +154,12 @@
       <fieldset>
         <textarea placeholder="textarea"></textarea>
       </fieldset>
+
+      <fieldset>
+        <label for="inputColor">Input: Color</label>
+        <input type="color" name="inputColor" id="inputColor">
+      </fieldset>
+
       <fieldset>
         <button type="submit">Submit Button</button>
       </fieldset>
@@ -194,12 +205,12 @@
   <div style="padding: 50px 0;">
     <h3 style="font-size: 24px; padding: 20px 0;">Images. Test 1</h3>
 
-    <img src="https://picsum.photos/536/354" alt=""><img src="https://picsum.photos/536/354" alt="">
+    <img src="https://picsum.photos/536/354?random=1" alt=""><img src="https://picsum.photos/536/354?random=2" alt="">
 
     <h3 style="font-size: 24px; padding: 20px 0;">Images. Test 2. Centering</h3>
 
     <div style="text-align: center;">
-      <img src="https://picsum.photos/536/354" alt="">
+      <img src="https://picsum.photos/536/354?random=3" alt="">
     </div>
 
     <h3 style="font-size: 24px; padding: 20px 0;">Picture. Test 1</h3>
@@ -225,8 +236,39 @@
         </picture>
       </div>
     </div>
+
+    <h3 style="font-size: 24px; padding: 20px 0;">Picture. Test 3. Figure</h3>
+
+    <figure>
+      <img src="https://picsum.photos/536/354?random=4" alt="Random Image">
+      <figcaption>A random Image</figcaption>
+    </figure>
+
   </div>
 
+  <!-- Header Test-->
+  <div style="padding: 50px 0;">
+    <h3 style="font-size: 24px; padding: 20px 0;">SVG Test</h3>
+
+    <img src="./images/html5-logo-test.svg" alt="" width="512" height="512">
+
+    <h3 style="font-size: 24px; padding: 20px 0;">SVG Test. Test 2. Centering</h3>
+
+    <div style="display: flex; justify-content: center;">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+          <path d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"/>
+          <path fill="#e44d26" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512"/>
+          <path fill="#f16529" d="M256 480.5V131H404.3L376 447"/>
+          <path fill="#ebebeb" d="M142 176.3h114v45.4h-64.2l4.2 46.5h60v45.3H154.4M156.4 336.3H202l3.2 36.3 50.8 13.6v47.4l-93.2-26"/>
+          <path fill="#fff" d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8"/>
+        </svg>
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="386.916" height="546.133" viewBox="0 0 362.734 512"><path d="m437.367 100.62-33.046 370.199L255.778 512l-148.134-41.123L74.633 100.62z" style="fill:#264de4" transform="translate(-74.633)"/><path d="m376.03 447.246 28.24-316.352H256v349.629z" style="fill:#2965f1" transform="translate(-74.633)"/><path d="m150.31 268.217 4.07 45.41H256v-45.41zM256 176.305H142.132l4.128 45.411H256zM256 433.399v-47.246l-.199.053-50.574-13.656-3.233-36.217h-45.585l6.362 71.301 93.02 25.823z" style="fill:#ebebeb" transform="translate(-74.633)"/><path d="M85.367 0h55v23h-32v23h32v23h-55zM151.367 0h55v20h-32v4h32v46h-55V49h32v-4h-32zM217.367 0h55v20h-32v4h32v46h-55V49h32v-4h-32z"/><path d="m311.761 313.627-5.271 58.894-50.647 13.67v47.244l93.094-25.801.683-7.672 10.671-119.551 1.108-12.194 8.198-91.912H255.843v45.411h63.988l-4.132 46.501h-59.856v45.41z" style="fill:#fff" transform="translate(-74.633)"/></svg>
+      </div>
+    </div>
+  </div>
 
   <!-- Details/Summary Test-->
   <div style="padding: 50px 0;">
@@ -250,7 +292,7 @@
     </p>
   </div>
 
-    <!-- Meter Test -->
+  <!-- Meter Test -->
   <div style="padding: 50px 0;">
     <h3 style="font-size: 24px; padding: 20px 0;">Meter Test</h3>
 
@@ -262,7 +304,6 @@
       Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">The HTML Meter element</a>
     </p>
   </div>
-
 
   <!-- Responsive Test-->
   <div style="padding: 50px 0;">

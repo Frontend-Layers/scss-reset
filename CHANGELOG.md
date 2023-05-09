@@ -1,5 +1,11 @@
 # Changelog
 
+# [1.3.8]
+
+- _total-reset.scss updates for inputs
+- added additional test cases
+- updated documentation
+
 # [1.3.4]
 
 - _total-reset.scss updates for svg. Added @namespace

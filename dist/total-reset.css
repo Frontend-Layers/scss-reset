@@ -1,14 +1,11 @@
 @namespace svg "http://www.w3.org/2000/svg";
-
 *:where(:not(table, thead, tbody, tr, th, td, svg|*)) {
   all: unset;
   box-sizing: border-box;
-
-  &::before,
-  &::after {
-    all: unset;
-    box-sizing: border-box;
-  }
+}
+*:where(:not(table, thead, tbody, tr, th, td, svg|*))::before, *:where(:not(table, thead, tbody, tr, th, td, svg|*))::after {
+  all: unset;
+  box-sizing: border-box;
 }
 
 div,
@@ -98,6 +95,7 @@ main,
 article,
 aside,
 details,
+fieldset,
 figcaption,
 figure,
 footer,
@@ -173,3 +171,63 @@ td {
   border: 0;
   vertical-align: baseline;
 }
+
+/**
+ * Forms
+ */
+input {
+  appearance: none;
+  display: inline-block;
+}
+
+input[type=color] {
+  width: 15px;
+  height: 15px;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type=color]::-webkit-color-swatch {
+  border: none;
+}
+
+input:required,
+input {
+  box-shadow: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+input:focus {
+  outline: none;
+}
+/*# sourceMappingURL=total-reset.css.map */

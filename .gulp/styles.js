@@ -72,7 +72,6 @@ const scss = () =>
     .pipe(dest(cfg.dest.scss))
     .pipe(dest(cfg.dest.css));
 
-
 /**
  * Styles Reload
  *
