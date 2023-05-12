@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 /**
  * Typography
  */
@@ -16,16 +18,14 @@ body {
   color: $text-color;
   font-size: $paragraph;
   line-height: $line-height;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeSpeed;
+
 }
 
 h1,
 h2,
 h3 {
   font-family: $header-font;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 
@@ -42,15 +42,12 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: $text-color;
-    text-decoration: none;
     outline: 0;
   }
 
   &:focus,
   &:active,
   &:hover {
-    color: $text-color;
     text-decoration: underline;
     outline: 0;
   }
@@ -64,17 +61,6 @@ em {
 b,
 strong {
   font-weight: bold;
-}
-
-input {
-  &:focus {
-    outline: none;
-  }
-}
-
-[disabled] {
-  pointer-events: none;
-  opacity: 0.5
 }
 
 .br {

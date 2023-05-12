@@ -103,7 +103,7 @@ const stylesRenameReset = () =>
 const copyCSS = () =>
   src(cfg.dest.cssDist + '*').pipe(dest(cfg.dest.cssTest));
 
-const copyResetCSS = () => src('./src/scss/_reset.scss').pipe(dest('./'));
+const copyResetCSS = () => src('./src/scss/*.scss').pipe(dest('./'));
 
 const minifyResetCSS = () => src('./build/reset.css')
   .pipe(cleanCSS({ debug: true }, (details) => {

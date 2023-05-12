@@ -47,25 +47,25 @@ pnpm i scss-reset --dev
 Please include into top of the main.scss:
 
 ```scss
-@import 'scss-reset/reset';
+@use 'scss-reset/reset';
 ```
 
 or depends of your workspace configuration will works too:
 
 ```scss
-@import '../node_modules/scss-reset/src/scss/_reset.scss';
+@use '../node_modules/scss-reset/src/scss/_reset.scss';
 ```
 
 or:
 
 ```scss
-@import '../node_modules/scss-reset/_reset.scss';
+@use '../node_modules/scss-reset/_reset.scss';
 ```
 
 or shorter:
 
 ```scss
-@import 'scss-reset/_reset.scss';
+@use 'scss-reset/_reset.scss';
 ```
 
 ## CDN
@@ -109,11 +109,19 @@ where need to ❗deep reset all properties of the ❗Shadow DOM elements without
 ### Imoprt Total Reset SCSS file
 
 ```scss
-@import 'scss-reset/total-reset';
+@use 'scss-reset/total-reset';
 ```
 
 
 ## Mixins
+
+Please include into necessary module:
+
+```scss
+@use 'scss-reset/reset-mixins';
+```
+
+### Mixins List
 
 | Mixins             | Include                      | Description                                       |
 |--------------------|------------------------------|---------------------------------------------------|
@@ -130,7 +138,7 @@ where need to ❗deep reset all properties of the ❗Shadow DOM elements without
 
 ### @mixin offxAll
 
-This mixin just added
+This mixin will add this snippet:
 
 ```css
 html, body {
@@ -138,12 +146,10 @@ html, body {
 }
 ```
 
-but
+Please be careful. You'll got scroll fix for whole page, but:
 
 - It isn't good for accessibility because it hides overflowed content permanently
-- CSS poperty ```position: sticky;``` doesn't work anymore because an ancestor element (```html, body```) has overflow property set
-
-just one profit - rought fix for whole page.
+- CSS poperty ```position: sticky;``` doesn't work because an ancestor element (```html, body```) has overflow property set.
 
 Please use ``` @include offx;``` for selected block elements instead to avoid CSS 'sticky' and UX issues.
 For example:

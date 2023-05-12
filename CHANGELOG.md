@@ -1,5 +1,10 @@
 # Changelog
 
+# [1.4.1]
+
+- doc misspelling fixes and updates
+- replaced @import to @use
+
 # [1.4.0]
 
 - added mixins 'offx' - for classes and 'offxAll' - for global prevent overflow issues

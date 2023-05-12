@@ -1,0 +1,123 @@
+/**
+ * Reset Mixing
+ * ================================================== */
+
+/**
+ * Disable Animation
+ */
+ @mixin disableAnimation {
+  transform: none !important;
+
+  transition: none !important;
+  transition-property: none !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+
+  animation: none !important;
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  animation-iteration-count: 1 !important;
+
+  scroll-behavior: auto !important;
+}
+
+/**
+ * Disable animation depends on Browser or Operation System configuration
+ */
+@mixin acDisableAnimation {
+  @media (prefers-reduced-motion: reduce) {
+    @include disableAnimation;
+  }
+}
+
+/**
+ * Accessability. Black and White Mode
+ */
+@mixin acModeBW {
+  filter: grayscale(100%);
+}
+
+/**
+ * Accessability. Inverse Mode
+ */
+@mixin acModeContrast {
+  filter: invert(100%);
+  background-color: $white !important;
+}
+
+/**
+ * Meter reset
+ */
+@mixin meterReset {
+  meter {
+    background: none;
+    -webkit-appearance: none;
+  }
+
+  ::-moz-meter-bar {
+    -moz-appearance: none
+  }
+
+  :-moz-meter-optimum::-moz-meter-bar,
+  :-moz-meter-sub-optimum::-moz-meter-bar,
+  :-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: none
+  }
+
+
+  meter::-webkit-meter-bar,
+  meter::-webkit-meter-optimum-value,
+  meter::-webkit-meter-suboptimum-value,
+  meter::-webkit-meter-even-less-good-value,
+  meter::-webkit-meter-inner-element {
+    background: none;
+  }
+}
+
+@mixin progressReset {
+
+  /**
+   * Progress Bar Reset
+   *
+   */
+  progress,
+  progress[role] {
+    display: block;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 40px;
+    margin: 0;
+
+    /* Reset Defaults */
+    appearance: none;
+    border: none;
+
+    /* Needs to be in here for Safari polyfill so background images work as expected. */
+    background-size: auto;
+  }
+
+  /* Polyfill */
+  progress[role]:after {
+    background-image: none;
+    /* removes default background from polyfill */
+  }
+
+  /* Ensure fallback text doesn't appear in polyfill */
+  progress[role] strong {
+    display: none;
+  }
+}
+
+// Global Overflow-x hide
+@mixin offxAll {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+// Overflow-x hide
+@mixin offx {
+  overflow-x: hidden;
+}

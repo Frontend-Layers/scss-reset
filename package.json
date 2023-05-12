@@ -1,6 +1,6 @@
 {
   "name": "scss-reset",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "SCSS Reset",
   "main": "gulpfile.js",
   "repository": {
