@@ -1,5 +1,9 @@
 # Changelog
 
+# [1.3.9]
+
+- updated documentation
+
 # [1.3.8]
 
 - _total-reset.scss updates for inputs

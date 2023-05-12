@@ -6,7 +6,7 @@
 
 _Reset compilation = modern reset + meyer's reset + normalizer_
 
-Demo: https://andreymatin.github.io/scss-reset/test/index.html
+Demo: https://frontend-layers.github.io/scss-reset/test/index.html
 
 ## Features
 
@@ -76,6 +76,8 @@ Optimized and compressed CSS version for _reset.scss
 <link rel="stylesheet" href="https://unpkg.com/scss-reset/build/reset.css">
 ```
 
+Transferred size: 3.62 kB
+
 ## Typography Usage
 
 - _variables.scss
@@ -130,7 +132,7 @@ where need to ❗deep reset all properties of the ❗Shadow DOM elements without
 
 ## Contributing
 
-For issues, bugs or improvements please open an [issue](https://github.com/andreymatin/scss-reset/issues/new)
+For issues, bugs or improvements please open an [issue](https://github.com/frontend-layers/scss-reset/issues/new)
 
 ---
 [MIT License](LICENSE)
