@@ -110,6 +110,20 @@
   }
 }
 
+// Global Overflow-x hide
+@mixin offxAll {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+// Overflow-x hide
+@mixin offx {
+  overflow-x: hidden;
+}
+
+
+
 
 /**
  * Modern CSS Reset Tweaks

@@ -124,6 +124,35 @@ where need to ❗deep reset all properties of the ❗Shadow DOM elements without
 | meterReset         | @include meterReset;         | Styles reset for ```<meter>```                    |
 | progressReset      | @include progressReset;      | Styles reset for ```<progress>```                 |
 | inputColorReset    | @include inputColorReset;    | Rest for input type:color                         |
+| offx               | @include offx;               | Prevent horizontal overflow issues for elements   |
+| offxAll            | @include offxAll;            | offx for whole document                           |
+
+
+### @mixin offxAll
+
+This mixin just added
+
+```css
+html, body {
+  overflow-x: hidden
+}
+```
+
+but
+
+- It isn't good for accessibility because it hides overflowed content permanently
+- CSS poperty ```position: sticky;``` doesn't work anymore because an ancestor element (```html, body```) has overflow property set
+
+just one profit - rought fix for whole page.
+
+Please use ``` @include offx;``` for selected block elements instead to avoid CSS 'sticky' and UX issues.
+For example:
+
+```scss
+.page-content {
+  @include offx;
+}
+```
 
 ## Technical Files
 

@@ -1,5 +1,11 @@
 # Changelog
 
+# [1.4.0]
+
+- added mixins 'offx' - for classes and 'offxAll' - for global prevent overflow issues
+- updated documentation
+- added additional test cases
+
 # [1.3.9]
 
 - updated documentation
