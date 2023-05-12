@@ -9,7 +9,7 @@ import gulp from 'gulp';
 import { scss, cssCompress, stylesReload, stylesRenameReset, copyCSS, copyResetCSS, minifyResetCSS } from './.gulp/styles.js';
 
 // Server
-import { openServer, openBrowser, bumper, cleanBuild, cleanDist } from './.gulp/server.js';
+import { openServer, openBrowser, bumper, cleanBuild, cleanDist, cleanStyles } from './.gulp/server.js';
 
 import connect from 'gulp-connect';
 
@@ -27,7 +27,7 @@ const html = () => src('./test/*.html').pipe(connect.reload());
 const watcher = () => {
   watch(
     ['./src/scss/**/*.scss', '!./src/scss/reset.scss'],
-    series(stylesRenameReset, scss, cssCompress, copyCSS, copyResetCSS, stylesReload)
+    series(stylesRenameReset, scss, cssCompress, copyCSS, copyResetCSS, stylesReload, cleanStyles)
   );
   watch('./test/*.html', html);
 };
@@ -40,7 +40,7 @@ export default series(
   cleanDist,
   cleanBuild,
   parallel(
-    series(stylesRenameReset, scss, cssCompress, copyCSS, copyResetCSS, minifyResetCSS),
+    series(stylesRenameReset, scss, cssCompress, copyCSS, copyResetCSS, minifyResetCSS, cleanStyles),
     openServer,
     openBrowser,
     watcher
@@ -55,7 +55,7 @@ const build = series(
   cleanDist,
   cleanBuild,
   parallel(
-    series(stylesRenameReset, scss, cssCompress, copyCSS, copyResetCSS, minifyResetCSS),
+    series(stylesRenameReset, scss, cssCompress, copyCSS, copyResetCSS, minifyResetCSS, cleanStyles),
   ),
   bumper
 );

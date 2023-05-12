@@ -1,5 +1,10 @@
 # Changelog
 
+# [1.4.2]
+
+- automated clean fix
+- updated documentation
+
 # [1.4.1]
 
 - doc misspelling fixes and updates

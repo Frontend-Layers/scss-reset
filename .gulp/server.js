@@ -77,9 +77,13 @@ const cleanDist = () => {
   return deleteAsync(['./dist']);
 };
 
+const cleanStyles = () => {
+  return deleteAsync(['./reset.scss', '_total-reset.scss', 'total-reset.css', '_typography.scss', '_variables.scss', 'main.scss']);
+};
+
 const cleanHTML = () => {
   return deleteAsync(['./dist/layouts', './build/layouts']);
 };
 
 
-export { openServer, openBrowser, bumper, cleanBuild, cleanDist, cleanHTML };
+export { openServer, openBrowser, bumper, cleanBuild, cleanDist, cleanHTML, cleanStyles };

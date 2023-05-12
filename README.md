@@ -62,18 +62,19 @@ or:
 @use '../node_modules/scss-reset/_reset.scss';
 ```
 
-or shorter:
+or by (mostly) depricated way:
 
 ```scss
-@use 'scss-reset/_reset.scss';
+@import 'scss-reset/reset';
 ```
+
 
 ## CDN
 
 Optimized and compressed CSS version for _reset.scss
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/scss-reset/build/reset.css">
+<link rel="stylesheet" href="https://unpkg.com/scss-reset/reset.css">
 ```
 
 Transferred size: 3.62 kB
@@ -118,7 +119,7 @@ where need to ❗deep reset all properties of the ❗Shadow DOM elements without
 Please include into necessary module:
 
 ```scss
-@use 'scss-reset/reset-mixins';
+@use 'scss-reset/reset-mixins' as *;
 ```
 
 ### Mixins List
