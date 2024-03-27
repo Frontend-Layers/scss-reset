@@ -299,7 +299,11 @@ html input[disabled] {
   cursor: default;
 }
 
-[disabled] {
+/**
+  * fix: <span disabled="false"></span> The problem that causes span cannot click
+  */
+[disabled],
+[disabled="true"] {
   pointer-events: none;
 }
 
