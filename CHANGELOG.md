@@ -1,5 +1,20 @@
 # Changelog
 
+# [1.4.4]
+
+- added reduced-motion rule
+- added support for `[disabled="true"]` and `[aria-disabled="true"]` attributes
+- expanded the structure of the SCSS library. Now the library can be imported using ```scss @use 'scss-reset'``` instead of ```scss @use 'scss-reset/reset'```
+- added a lightweight reset `light-reset` optimized for modern browsers with seamless and "gentle" integration into popular CSS frameworks.
+- added additional styles for iframe, object, embed and svg
+- added default black video background
+- added bootstrap test pages
+
+
+# [1.4.3]
+
+- minor infrastructure changes
+
 # [1.4.2]
 
 - automated clean fix
@@ -12,7 +27,7 @@
 
 # [1.4.0]
 
-- added mixins 'offx' - for classes and 'offxAll' - for global prevent overflow issues
+- added mixins `offx` - for classes and `offxAll` - for global prevent overflow issues
 - updated documentation
 - added additional test cases
 
@@ -44,13 +59,13 @@
 
 # [1.3.0]
 
-- added "total" reset _total-reset.scss
+- added "total" reset `_total-reset.scss` for Web Components
 - freshed up dev infrastructure
 - added Data URI snippets
 
 # [1.2.3]
 
-- scss: added min-height: -webkit-fill-available (https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/)
+- scss: added `min-height: -webkit-fill-available` (ref: https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/)
 
 
 ## [1.2.2] - 2021-09-12
@@ -72,9 +87,9 @@
 
 ## [1.1.11] - 2020-12-17
 
-- Updated ```<legend>``` reset
-- Updated ```<fieldset>``` reset
-- Added ```<progress>``` reset mixin and polyfills
+- Updated `<legend>` reset
+- Updated `<fieldset>` reset
+- Added `<progress>` reset mixin and polyfills
 - Added copy of _reset.css from src folder to the upper level
 - Added test html for _reset.scss only without typography normalization
 

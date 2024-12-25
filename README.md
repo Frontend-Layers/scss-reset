@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/scss-reset?color=%23cb0000)](https://www.npmjs.com/package/scss-reset)
 [![npm](https://img.shields.io/npm/dw/scss-reset)](https://www.npmjs.com/package/scss-reset)
 
-_Reset compilation = modern reset + meyer's reset + normalizer_
+_Reset compilation = modern reset + Meyer's reset + normalizer_
 
 Demo: https://frontend-layers.github.io/scss-reset/test/index.html
 
@@ -14,13 +14,13 @@ Demo: https://frontend-layers.github.io/scss-reset/test/index.html
 - Modernized [modern-css-reset](https://github.com/hankchizljaw/modern-css-reset)
 - Useful parts from [normalize.css](https://necolas.github.io/normalize.css/)
 - Optional typography and mobile friendly definitions by SCSS variables (REM, BEM(int))
-- Expandable by prebuilded mixins and ports (Accessability, HTML and Web compoents, etc.)
+- Expandable by prebuilded mixins and ports (Accessability, HTML and Web Components, etc.)
 
 ## Why
 
-For instantly fix some persistent CSS issues and add missing parts for popular CSS resets.
+To instantly fix some persistent CSS issues and add missing parts for popular CSS resets.
 It is also compatible with other HTML/CSS frameworks like Twitter Bootstrap, Tailwind CSS, etc.
-You can extend styles reset by mixin collection and easily improve it.
+You can extend reset styles by a mixin collection and easily improve it.
 
 ## Install
 
@@ -44,13 +44,26 @@ pnpm i scss-reset --dev
 
 ## Usage
 
-Please include into top of the main.scss:
+Please include at the top of the `main.scss`:
+
+```scss
+@use 'scss-reset';
+```
+
+or:
+
+```scss
+@import 'scss-reset';
+```
+
+
+### Troubleshooting Usage
 
 ```scss
 @use 'scss-reset/reset';
 ```
 
-or depends of your workspace configuration will works too:
+or depending on your workspace configuration, this will work too:
 
 ```scss
 @use '../node_modules/scss-reset/src/scss/_reset.scss';
@@ -62,12 +75,13 @@ or:
 @use '../node_modules/scss-reset/_reset.scss';
 ```
 
-or by (mostly) depricated way:
+or by the (mostly) deprecated way:
+
+or
 
 ```scss
 @import 'scss-reset/reset';
 ```
-
 
 ## CDN
 
@@ -95,8 +109,8 @@ You can copy them from to development folder for additional custom modifications
 
 ### Usage with Shopify Dawn theme
 
-- Please, copy reset-shopify-down.css from '/res' npm folder to '/assets' theme folder
-- Please, include reset-shopify-down.css into 'layout/theme.liquid/' after base.css
+- Please copy the `reset-shopify-down.css` file from the `/res` npm folder to the `/assets` theme folder.
+- Please include the `reset-shopify-down.css` file in `layout/theme.liquid/` after `base.css`.
 
 ```liquid
 {{ 'reset-shopify-down.css' | asset_url | stylesheet_tag }}
@@ -107,12 +121,17 @@ You can copy them from to development folder for additional custom modifications
 Please, use _total-reset.scss for Web Components or for modern JavaScript Apps
 where need to ❗deep reset all properties of the ❗Shadow DOM elements without reset Document styles.
 
-### Imoprt Total Reset SCSS file
+### Import Total Reset SCSS file
 
 ```scss
 @use 'scss-reset/total-reset';
 ```
 
+## Light Reset
+
+```scss
+@use 'scss-reset/light-reset';
+```
 
 ## Mixins
 
@@ -122,7 +141,7 @@ Please include into necessary module:
 @use 'scss-reset/reset-mixins' as *;
 ```
 
-### Mixins List
+### Available Mixins
 
 | Mixins             | Include                      | Description                                       |
 |--------------------|------------------------------|---------------------------------------------------|
@@ -139,7 +158,7 @@ Please include into necessary module:
 
 ### @mixin offxAll
 
-This mixin will add this snippet:
+This mixin adds the following snippet:
 
 ```css
 html, body {
@@ -147,12 +166,12 @@ html, body {
 }
 ```
 
-Please be careful. You'll got scroll fix for whole page, but:
+Please be careful. You'll get scroll fix for whole page, but:
 
-- It isn't good for accessibility because it hides overflowed content permanently
-- CSS poperty ```position: sticky;``` doesn't work because an ancestor element (```html, body```) has overflow property set.
+- However, this can cause accessibility issues because it permanently hides overflow content
+- CSS property `position: sticky;` doesn't work because an ancestor element (`html, body`) has overflow property set.
 
-Please use ``` @include offx;``` for selected block elements instead to avoid CSS 'sticky' and UX issues.
+Please use `@include offx;` for selected block elements instead of to avoid CSS 'sticky' and UX issues.
 For example:
 
 ```scss

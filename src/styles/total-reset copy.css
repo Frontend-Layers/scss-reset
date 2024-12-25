@@ -1,21 +1,10 @@
 @namespace svg "http://www.w3.org/2000/svg";
-/**
- * Total Reset
- * ==================================================
- * Universal reset of styles for all elements and pseudo-elements for customizing Web Components and browser extensions.
- */
-/* Selector targets all elements except tables and svg elements */
 *:where(:not(table, thead, tbody, tr, th, td, svg|*)) {
-  /* Resets all styles for the selected elements */
   all: unset;
-  /* Set box-sizing to border-box so padding and borders do not affect the total width and height of elements */
   box-sizing: border-box;
-  /* Resets styles for ::before and ::after pseudo-elements */
 }
 *:where(:not(table, thead, tbody, tr, th, td, svg|*))::before, *:where(:not(table, thead, tbody, tr, th, td, svg|*))::after {
-  /* Unsets all styles for pseudo-elements */
   all: unset;
-  /* Set box-sizing to border-box for pseudo-elements */
   box-sizing: border-box;
 }
 
@@ -139,11 +128,6 @@ svg {
   vertical-align: middle;
 }
 
-canvas,
-iframe {
-  display: block;
-}
-
 [hidden] {
   display: none;
 }
@@ -255,4 +239,4 @@ input:focus {
     scroll-behavior: smooth;
   }
 }
-/*# sourceMappingURL=total-reset.css.map */
+/*# sourceMappingURL=total-reset copy.css.map */

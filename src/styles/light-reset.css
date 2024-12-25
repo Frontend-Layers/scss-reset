@@ -1,0 +1,46 @@
+/**
+ * Light Reset
+ * ==================================================
+ * A light version of the reset stylesheet that provides a clean slate for styling
+ * and integration with  CSS frameworks.
+ */
+/* Set font size adjustment for the entire document */
+html {
+  -webkit-text-size-adjust: 100%; /* For WebKit browsers */
+  /* Smooth scroll behavior when an element within the container is focused */
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Basic styling for the body */
+body {
+  text-size-adjust: 100%; /* Adjusts text size */
+  position: relative; /* Positions relative to parent elements */
+  width: 100%; /* Full width of the screen */
+  min-height: 100vh; /* Minimum height is the full visible height of the screen */
+  /* Font smoothing for better text rendering on macOS */
+  -moz-osx-font-smoothing: grayscale; /* For Firefox */
+  -webkit-font-smoothing: antialiased; /* For WebKit browsers */
+  text-rendering: optimizeSpeed; /* Optimizes text rendering for better performance */
+}
+
+/* Universal selector for all elements and pseudo-elements */
+*,
+::after,
+::before {
+  box-sizing: border-box; /* Includes padding and border within element's width/height */
+}
+
+/* Styling for multimedia elements */
+audio,
+img,
+picture,
+svg,
+video {
+  max-width: 100%; /* Limits the maximum width of elements to 100% */
+  display: inline-block; /* Display elements as inline-blocks */
+  vertical-align: middle; /* Aligns vertically */
+  height: auto; /* Auto height to maintain aspect ratio */
+}
+/*# sourceMappingURL=light-reset.css.map */

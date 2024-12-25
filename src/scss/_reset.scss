@@ -1,6 +1,11 @@
 /**
  * Modern CSS Reset Tweaks
- * ================================================== */
+ * ==================================================
+ * A collection of modern CSS reset and normalization styles
+ * to ensure consistent behavior across browsers, OS and devices.
+ */
+
+/* Ensure consistent font resizing on mobile devices */
 html {
   -webkit-text-size-adjust: 100%;
 
@@ -9,6 +14,7 @@ html {
   }
 }
 
+/* Basic body setup for layout and text rendering optimization */
 body {
   text-size-adjust: 100%;
   position: relative;
@@ -22,7 +28,7 @@ body {
 }
 
 
-/* Box sizing normalization */
+/* Apply box-sizing globally for consistent element sizing */
 *,
 ::after,
 ::before {
@@ -30,7 +36,7 @@ body {
 }
 
 
-/* Elements that don't have a class get default styles */
+/* Style unclassed links for better accessibility */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -38,93 +44,124 @@ a:not([class]) {
 
 /**
  * CSS Reset Tweaks
- *
- * http://meyerweb.com/eric/tools/css/reset/
- * v2.0-modified | 20110126
- * License: none (public domain)
+ * Based on Eric Meyer's CSS Reset v2.0-modified (public domain)
+ * URL: http://meyerweb.com/eric/tools/css/reset/
  */
 
-html,
-body,
-div,
-span,
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+br,
+button,
+canvas,
+caption,
+center,
+cite,
+code,
+col,
+colgroup,
+data,
+datalist,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
+head,
 header,
 hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
+hr,
+html,
+i,
+iframe,
+img,
+input,
+ins,
+kbd,
+label,
+legend,
+li,
+link,
+main,
+map,
 mark,
-audio,
-video {
+menu,
+meta,
+meter,
+nav,
+noscript,
+object,
+ol,
+optgroup,
+option,
+output,
+p,
+param,
+picture,
+pre,
+progress,
+q,
+rb,
+rp,
+rt,
+rtc,
+ruby,
+s,
+samp,
+script,
+section,
+select,
+small,
+source,
+span,
+strong,
+style,
+svg,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+template,
+textarea,
+tfoot,
+th,
+thead,
+time,
+title,
+tr,
+track,
+tt,
+u,
+ul,
+var,
+video,
+wbr {
   font-size: 100%;
   font: inherit;
   margin: 0;
@@ -133,32 +170,43 @@ video {
   vertical-align: baseline;
 }
 
-/* make sure to set some focus styles for accessibility */
+/* Add focus styles to improve accessibility */
 :focus {
   outline: 0;
 }
 
-/* HTML5 display-role reset for older browsers */
-main,
+/* Normalize HTML5 elements for older browsers */
 article,
 aside,
 details,
+embed,
 figcaption,
 figure,
 footer,
 header,
 hgroup,
+main,
 menu,
 nav,
+object,
 section {
   display: block;
 }
 
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block
+}
+
+/* Remove default list styling */
 ol,
 ul {
   list-style: none;
 }
 
+/* Normalize quote styling */
 blockquote,
 q {
   quotes: none;
@@ -170,14 +218,13 @@ q {
   }
 }
 
-/**
- * Input Reset
- */
+/* Reset and normalize form inputs */
 input:required,
 input {
   box-shadow: none;
 }
 
+/* Autofill styling for better compatibility */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -185,6 +232,7 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
+/* Improve appearance of search inputs */
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-results-button,
@@ -213,15 +261,11 @@ input {
   }
 }
 
-/**
- * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
- */
-audio,
-canvas,
 video {
-  display: inline-block;
-  max-width: 100%;
+  background: #000;
 }
+
+
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
@@ -247,17 +291,18 @@ a:hover {
   outline: none;
 }
 
-/* Make images easier to work with */
-img {
+/**
+ * Make media easier to work with
+ */
+audio,
+img,
+picture,
+svg,
+video {
   max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   height: auto;
-}
-
-/* Make pictures easier to work with */
-picture {
-  display: inline-block;
 }
 
 /**
@@ -299,16 +344,15 @@ html input[disabled] {
   cursor: default;
 }
 
-/**
-  * fix: <span disabled="false"></span> The problem that causes span cannot click
-  */
+/* Additional attribute handling for accessibility */
 [disabled],
-[disabled="true"] {
+[disabled="true"],
+[aria-disabled="true"] {
   pointer-events: none;
 }
 
 /**
- * 1. Address box sizing set to content-box in IE 8/9.
+ * Address box sizing set to content-box in IE 8/9.
  */
 input[type="checkbox"],
 input[type="radio"] {
@@ -384,7 +428,7 @@ hr {
 }
 
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
+ * Correct the inheritance and scaling of font size in all browsers.
  */
 pre {
   font-family: monospace, monospace;
@@ -458,8 +502,7 @@ textarea {
 }
 
 /**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
+ * Show the overflow in IE and Edge.
  */
 button,
 input {
@@ -469,7 +512,6 @@ input {
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
 select {
@@ -490,7 +532,6 @@ button,
 /**
  * Remove the inner border and padding in Firefox.
  */
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -576,9 +617,8 @@ summary {
   display: list-item;
 }
 
-/*
- * Misc
- * ========================================================================== */
+/* Misc
+   ========================================================================== */
 
 template {
   display: none;

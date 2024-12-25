@@ -5,7 +5,7 @@
 /**
  * Disable Animation
  */
- @mixin disableAnimation {
+@mixin disableAnimation {
   transform: none !important;
 
   transition: none !important;
@@ -112,7 +112,9 @@
 
 // Global Overflow-x hide
 @mixin offxAll {
-  html, body {
+
+  html,
+  body {
     overflow-x: hidden;
   }
 }

@@ -20,7 +20,7 @@
     "**/tmp": true,
     "**/styles": true,
     "**/package-lock.json": true,
-    "**/yarn.lock": true   
+    "**/yarn.lock": true
   },
   "html.format.indentInnerHtml": false,
   "html.format.wrapAttributes": "preserve",
@@ -34,7 +34,7 @@
     "insertSpaceBeforeFunctionParenthesis": false
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.validate": [
     "javascript"

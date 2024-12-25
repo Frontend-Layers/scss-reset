@@ -105,6 +105,11 @@ const copyCSS = () =>
 
 const copyResetCSS = () => src('./src/scss/*.scss').pipe(dest('./'));
 
+const moveResetToScssReset = () =>
+  src('./src/scss/_reset.scss')
+    .pipe(rename('scss-reset.scss'))
+    .pipe(dest('./'));
+
 const minifyResetCSS = () => src('./build/reset.css')
   .pipe(cleanCSS({ debug: true }, (details) => {
     console.log(`${details.name}: ${details.stats.originalSize}`);
@@ -112,7 +117,7 @@ const minifyResetCSS = () => src('./build/reset.css')
   }))
   .pipe(dest('./build/'));
 
-export { scss, cssCompress, stylesReload, stylesRenameReset, copyCSS, copyResetCSS, minifyResetCSS };
+export { scss, cssCompress, stylesReload, stylesRenameReset, copyCSS, copyResetCSS, minifyResetCSS, moveResetToScssReset };
 
 
 
