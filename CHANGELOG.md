@@ -1,10 +1,15 @@
 # Changelog
 
+# [1.4.5] - 2024-12-27
+
+- recovered index.scss
+- updated `light-reset.scss`
+
 # [1.4.4]
 
 - added reduced-motion rule
 - added support for `[disabled="true"]` and `[aria-disabled="true"]` attributes
-- expanded the structure of the SCSS library. Now the library can be imported using ```scss @use 'scss-reset'``` instead of ```scss @use 'scss-reset/reset'```
+- expanded the structure of the SCSS library. Now the library can be imported using `scss @use 'scss-reset'` instead of `scss @use 'scss-reset/reset'`
 - added a lightweight reset `light-reset` optimized for modern browsers with seamless and "gentle" integration into popular CSS frameworks.
 - added additional styles for iframe, object, embed and svg
 - added default black video background
