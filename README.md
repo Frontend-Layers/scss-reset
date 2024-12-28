@@ -24,22 +24,8 @@ You can extend reset styles by a mixin collection and easily improve it.
 
 ## Install
 
-[![NPM](https://nodei.co/npm/scss-reset.png?compact=true)](https://nodei.co/npm/scss-reset/)
-
 ```shell
 npm i scss-reset --save-dev
-```
-
-### by yarn
-
-```shell
-yarn add scss-reset --dev
-```
-
-### by pnpm
-
-```shell
-pnpm i scss-reset --dev
 ```
 
 ## Usage
@@ -50,14 +36,38 @@ Please include at the top of the `main.scss`:
 @use 'scss-reset';
 ```
 
-or:
+## Ports
+
+| Title              | Usage                        | Description                                                                                                       |
+|--------------------|------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| total-reset.scss   | @use 'scss-reset/total';     | Provides a deep CSS reset, ideal for web components and plugins to ensure consistent styling across environments. |
+| light-reset.scss   | @use 'scss-reset/light';     | Offers a lightweight reset with maximum compatibility for use alongside popular CSS frameworks.                   |
+
+
+## Troubleshooting
+
+### Install variations
+
+by yarn
+
+```shell
+yarn add scss-reset --dev
+```
+
+by pnpm
+
+```shell
+pnpm i scss-reset --dev
+```
+
+
+#### Import variations
 
 ```scss
 @import 'scss-reset';
 ```
 
-
-### Troubleshooting Usage
+or
 
 ```scss
 @use 'scss-reset/reset';
@@ -116,21 +126,21 @@ You can copy them from to development folder for additional custom modifications
 {{ 'reset-shopify-down.css' | asset_url | stylesheet_tag }}
 ```
 
-## Total Reset for Web Components
+## Total Reset
 
-Please, use _total-reset.scss for Web Components or for modern JavaScript Apps
-where need to ❗deep reset all properties of the ❗Shadow DOM elements without reset Document styles.
-
-### Import Total Reset SCSS file
+`total-reset.scss` Designed for Web Components, modern JavaScript applications, or browser extensions.
+Ideal when you need to ❗**deep reset all properties**❗ of Shadow DOM elements without **resetting document styles**.
 
 ```scss
-@use 'scss-reset/total-reset';
+@use 'scss-reset/total';
 ```
 
 ## Light Reset
 
+`light-reset.scss` -- Ideal for use with popular CSS frameworks and offering maximum compatibility
+
 ```scss
-@use 'scss-reset/light-reset';
+@use 'scss-reset/light';
 ```
 
 ## Mixins
@@ -179,11 +189,6 @@ For example:
   @include offx;
 }
 ```
-
-## Technical Files
-
-- Compressed CSS version: /build/reset.css
-- Test Pages List: /test/index.html
 
 ## Contributing
 

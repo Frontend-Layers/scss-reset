@@ -1,5 +1,11 @@
 # Changelog
 
+# [1.4.6] - 2024-12-28
+
+- fixed `light-reset.scss` dist/build styles
+- updated documentation
+- added short links for total and light SCSS resets
+
 # [1.4.5] - 2024-12-27
 
 - recovered index.scss

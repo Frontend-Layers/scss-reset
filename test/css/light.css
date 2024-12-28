@@ -4,16 +4,13 @@
  * A light version of the reset stylesheet that provides a clean slate for styling
  * and integration with  CSS frameworks.
  */
-
-
 /* Set font size adjustment for the entire document */
 html {
   -webkit-text-size-adjust: 100%; /* For WebKit browsers */
-
   /* Smooth scroll behavior when an element within the container is focused */
-  &:focus-within {
-    scroll-behavior: smooth;
-  }
+}
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 /* Basic styling for the body */
@@ -22,7 +19,6 @@ body {
   position: relative; /* Positions relative to parent elements */
   width: 100%; /* Full width of the screen */
   min-height: 100vh; /* Minimum height is the full visible height of the screen */
-
   /* Font smoothing for better text rendering on macOS */
   -moz-osx-font-smoothing: grayscale; /* For Firefox */
   -webkit-font-smoothing: antialiased; /* For WebKit browsers */
@@ -41,126 +37,125 @@ body {
  * Based on Eric Meyer's CSS Reset v2.0-modified (public domain)
  * URL: http://meyerweb.com/eric/tools/css/reset/
  */
-
- a,
- abbr,
- acronym,
- address,
- applet,
- article,
- aside,
- audio,
- b,
- big,
- blockquote,
- body,
- br,
- button,
- canvas,
- caption,
- center,
- cite,
- code,
- col,
- colgroup,
- data,
- datalist,
- dd,
- del,
- details,
- dfn,
- div,
- dl,
- dt,
- em,
- embed,
- fieldset,
- figcaption,
- figure,
- footer,
- form,
- h1,
- h2,
- h3,
- h4,
- h5,
- h6,
- head,
- header,
- hgroup,
- hr,
- html,
- i,
- iframe,
- img,
- input,
- ins,
- kbd,
- label,
- legend,
- li,
- link,
- main,
- map,
- mark,
- menu,
- meta,
- meter,
- nav,
- noscript,
- object,
- ol,
- optgroup,
- option,
- output,
- p,
- param,
- picture,
- pre,
- progress,
- q,
- rb,
- rp,
- rt,
- rtc,
- ruby,
- s,
- samp,
- script,
- section,
- select,
- small,
- source,
- span,
- strong,
- style,
- svg,
- sub,
- summary,
- sup,
- table,
- tbody,
- td,
- template,
- textarea,
- tfoot,
- th,
- thead,
- time,
- title,
- tr,
- track,
- tt,
- u,
- ul,
- var,
- video,
- wbr {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   vertical-align: baseline;
- }
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+br,
+button,
+canvas,
+caption,
+center,
+cite,
+code,
+col,
+colgroup,
+data,
+datalist,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+head,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+input,
+ins,
+kbd,
+label,
+legend,
+li,
+link,
+main,
+map,
+mark,
+menu,
+meta,
+meter,
+nav,
+noscript,
+object,
+ol,
+optgroup,
+option,
+output,
+p,
+param,
+picture,
+pre,
+progress,
+q,
+rb,
+rp,
+rt,
+rtc,
+ruby,
+s,
+samp,
+script,
+section,
+select,
+small,
+source,
+span,
+strong,
+style,
+svg,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+template,
+textarea,
+tfoot,
+th,
+thead,
+time,
+title,
+tr,
+track,
+tt,
+u,
+ul,
+var,
+video,
+wbr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
 
 /* Normalize HTML5 elements for older browsers */
 article,
@@ -184,7 +179,7 @@ canvas,
 iframe {
   max-width: 100%;
   height: auto;
-  display: block
+  display: block;
 }
 
 /* Reset and normalize form inputs */
@@ -224,10 +219,8 @@ textarea {
   resize: vertical;
 }
 
-input {
-  &:focus {
-    outline: none;
-  }
+input:focus {
+  outline: none;
 }
 
 video {
@@ -245,3 +238,4 @@ video {
   vertical-align: middle; /* Aligns vertically */
   height: auto; /* Auto height to maintain aspect ratio */
 }
+/*# sourceMappingURL=light.css.map */

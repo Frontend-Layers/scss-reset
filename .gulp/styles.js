@@ -91,9 +91,20 @@ const cssCompress = () =>
     .pipe(size());
 
 
-const stylesRenameReset = () =>
+const renameMain = () =>
   src('./src/scss/_reset.scss')
     .pipe(rename('reset.scss'))
+    .pipe(dest('./src/scss'));
+
+
+const renameLight = () =>
+  src('./src/scss/light-reset.scss')
+    .pipe(rename('light.scss'))
+    .pipe(dest('./src/scss'));
+
+const renameTotal = () =>
+  src('./src/scss/total-reset.scss')
+    .pipe(rename('total.scss'))
     .pipe(dest('./src/scss'));
 
 /**
@@ -117,7 +128,7 @@ const minifyResetCSS = () => src('./build/reset.css')
   }))
   .pipe(dest('./build/'));
 
-export { scss, cssCompress, stylesReload, stylesRenameReset, copyCSS, copyResetCSS, minifyResetCSS, moveResetToScssReset };
+export { scss, cssCompress, stylesReload, renameMain, renameLight, renameTotal, copyCSS, copyResetCSS, minifyResetCSS, moveResetToScssReset };
 
 
 
